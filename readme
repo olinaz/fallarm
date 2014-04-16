@@ -1,2 +1,18 @@
-1st version of readme at 031314
-2nd version 
+fallarm
+=======
+
+2014_Spring_Capstone_Porject
+
+FallArm_AndroidClient: 
+  The client software running on Android device to collect sensor data from OpenIntents SensorSimulator 
+  and then send to FallArm_NetworkServer if any changes on the data, together with the patient ID. 
+  The entire project is majorly based on OpenIntents SimulatorSettings project for testing their SensorSimulator. 
+  
+
+FallArm_NetworkServer:
+  The network server software running in background to receive and process data from Android client. 
+  RiskManager class is to calculate the risk level of the patient based on the sensor data. 
+  EmailSender class is to send alert message to the staff email address once a falling-down is detected.
+  EventLogger class is to write the adverse event (sensor data, patient ID, together with current timestamp) 
+  to the database (MySQL).
+
